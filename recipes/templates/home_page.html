@@ -1,0 +1,78 @@
+{% extends "master.html" %}
+{% load static %}
+
+{% block title %}
+    Главная
+{% endblock %}
+
+{% block content %}
+<h1 class="choose-category">Выберите категорию:</h1>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+        <a href="/category/soup">
+            <div class="card h-80">
+                <img src="{% static 'img/soups.png' %}" class="card-img-top"
+                alt="Hollywood Sign on The Hill" />
+                <div class="card-body">
+                    <h5 class="card-title text-center">Первые блюда</h5>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col">
+        <a href="/category/second_course">
+            <div class="card h-80">
+                <img src="{% static 'img/second-courses.png' %}" class="card-img-top"
+                alt="Hollywood Sign on The Hill" />
+                <div class="card-body">
+                    <h5 class="card-title text-center">Вторые блюда</h5>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col">
+        <a href="/category/salad">
+            <div class="card h-80">
+                <img src="{% static 'img/salads.png' %}" class="card-img-top"
+                alt="Hollywood Sign on The Hill" />
+                <div class="card-body">
+                    <h5 class="card-title text-center">Салаты</h5>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col">
+        <a href="/category/grill">
+            <div class="card h-80">
+                <img src="{% static 'img/grill.png' %}" class="card-img-top"
+                alt="Hollywood Sign on The Hill" />
+                <div class="card-body">
+                    <h5 class="card-title text-center">Мангал</h5>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col">
+        <a href="/category/dessert">
+            <div class="card h-80">
+                <img src="{% static 'img/desserts.png' %}" class="card-img-top"
+                alt="Hollywood Sign on The Hill" />
+                <div class="card-body">
+                    <h5 class="card-title text-center">Десерты</h5>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col">
+        <a href="/category/drink">
+            <div class="card h-80">
+                <img src="{% static 'img/drinks.png' %}" class="card-img-top"
+                alt="Hollywood Sign on The Hill" />
+                <div class="card-body">
+                    <h5 class="card-title text-center">Напитки</h5>
+                </div>
+            </div>
+        </a>
+    </div>
+{% endblock %}
