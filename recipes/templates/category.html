@@ -6,7 +6,77 @@
     {{ category_choices }}
 {% endblock %}
 
+{% block css %}
+<link rel="stylesheet" href="{% static 'category.css' %}">
+{% endblock %}
 
 {% block content %}
-    
+<h1 class="choose-category">Рецепты категории:</h1>
+
+<div class="card mb-3" style="max-width: 540px;">
+    <a href="http://">
+        <div class="row g-0 mx-auto">
+            <div class="col-md-4">
+                <img
+                src="{% static 'img/soup-recipe-1.png' %}"
+                alt="Trendy Pants and Shoes"
+                class="category-recipe-img rounded-start"
+                />
+            </div>
+            <div class="col-md-8">
+                <div class="card-body-category">
+                    <h5 class="card-title">Рассольник с перловкой и солеными огурцами</h5>
+                    <p class="card-text">
+                        Ароматный, сытный, вкусный - удовольствие в каждой ложке! Рассольник классический с перловкой и солеными огурцами.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="card mb-3" style="max-width: 540px;">
+    <a href="http://">
+        <div class="row g-0 mx-auto">
+        <div class="col-md-4">
+            <img
+            src="{% static 'img/soup-recipe-1.png' %}"
+            alt="Trendy Pants and Shoes"
+            class="category-recipe-img rounded-start"
+            />
+        </div>
+        <div class="col-md-8">
+            <div class="card-body-category">
+            <h5 class="card-title">Рассольник с перловкой и солеными огурцами</h5>
+            <p class="card-text">
+                Ароматный, сытный, вкусный - удовольствие в каждой ложке! Рассольник классический с перловкой и солеными огурцами.
+            </p>
+            </div>
+        </div>
+        </div>
+    </a>
+</div>
+
+<div class="card mb-3" style="max-width: 540px;">
+    <a href="http://">
+        <div class="row g-0 mx-auto">
+        <div class="col-md-4">
+            <img
+            src="{% static 'img/soup-recipe-1.png' %}"
+            alt="Trendy Pants and Shoes"
+            class="category-recipe-img rounded-start"
+            />
+        </div>
+        <div class="col-md-8">
+            <div class="card-body-category">
+            <h5 class="card-title">Рассольник с перловкой и солеными огурцами</h5>
+            <p class="card-text">
+                Ароматный, сытный, вкусный - удовольствие в каждой ложке! Рассольник классический с перловкой и солеными огурцами. перловкой и солеными огурцами.
+            </p>
+            </div>
+        </div>
+        </div>
+    </a>
+</div>
+
 {% endblock %}

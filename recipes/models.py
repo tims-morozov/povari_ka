@@ -12,7 +12,7 @@ CATEGORY_CHOICES = {
 class Recipe(models.Model):
     category = models.CharField(max_length=15, choices=CATEGORY_CHOICES, default='')
     name = models.CharField(max_length=250, default='')
-    description = models.CharField(max_length=1200, default='')
+    description = models.CharField(max_length=140, default='')
     image = models.ImageField(upload_to='images/', default='')
 
     def __str__(self):
