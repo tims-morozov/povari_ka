@@ -9,7 +9,7 @@ def home(request):
 def category(request, category_val):
     category_choices = CATEGORY_CHOICES[category_val]
     curr_category = category_val
-    category_result = Recipe.objects.filter(category=category_val)
+    category_result = Recipe.objects.all().filter(category=curr_category)
     template = loader.get_template('category.html')
     context = {
         'category_choices': category_choices,

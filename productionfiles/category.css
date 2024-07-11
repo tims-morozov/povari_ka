@@ -11,10 +11,25 @@
 .category-recipe-img {
     height: 190px;
     width: 190px;
+    object-fit: cover
 }
 
 .card-body-category {
     margin-top: 10px;
     margin-left: 25px;
     margin-right: 10px;
+}
+
+.card-title {
+    text-transform: lowercase;
+}
+
+.card-title::first-letter {
+    text-transform: uppercase;
+}
+
+.category-underline {
+    width: 400px; 
+    margin: auto;
+    margin-top: 20px;
 }
