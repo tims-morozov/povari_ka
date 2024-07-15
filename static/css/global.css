@@ -19,25 +19,12 @@ body {
 }
 
 .choose-category {
-    font-size: 28px;
-    margin-top: 86px;
+    font-size: 26px;
+    margin-top: 80px;
     margin-bottom: 0;
     color: #333333;
     font-weight: 400;
     text-align: center;
-}
-
-.row {
-    padding: 50px 300px;
-}
-
-.card {
-    width: 254px;
-}
-
-.card img {
-    height: 254px;
-    width: 254px;
 }
 
 .category-link {

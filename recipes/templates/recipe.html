@@ -1,0 +1,45 @@
+{% extends "master.html" %}
+{% load static %}
+
+
+{% block title %}
+    {{ recipe_choices.name|lower|capfirst }}
+{% endblock %}
+
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/recipe.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <div class="hero-block">
+        <div class="row">
+            <div class="col-md-10">
+                <div class="row bg-white rounded">
+                    <div class="col-md-3 mt-1">
+                        <img class="hero-image img-fluid img-responsive rounded product-image" src="{% static 'img/soups.png' %}">
+                    </div>
+                    <div class="hero-text col-md-6 mt-3">
+                        <h5>Рассольник с перловкой и солеными огурцами</h5>
+                        <hr>
+                        <p class="text-justify para mb-0">Ароматный, сытный, вкусный - удовольствие в каждой ложке!
+                            Рассольник классический с перловкой и солеными огурцами - суп знакомый всем с детства. 
+                            Это отличный вариант первого блюда для всей семьи на обед. Приготовьте такой рассольник, и 
+                            вся семья будет довольна!<br><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="ingredients-title">Состав / Ингредиенты (на одну порцию):</h1>
+        
+        <ul class="ingredients-list">
+            <li class="ingredient">Вода</li>
+        </ul>
+    </div>   
+{% endblock %}
+
+
+

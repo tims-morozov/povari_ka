@@ -11,7 +11,7 @@
 .category-recipe-img {
     height: 190px;
     width: 190px;
-    object-fit: cover
+    object-fit: cover;
 }
 
 .card-body-category {

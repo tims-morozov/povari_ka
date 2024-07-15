@@ -16,7 +16,8 @@ class Recipe(models.Model):
     image = models.ImageField(upload_to='images', blank=True, null=True, default='Recipe Image')
 
     def __str__(self):
-        return f"{self.name}" 
+        self.name = self.name.capitalize()
+        return f"{self.name} (id: {self.id})" 
  
 
 class Ingredient(models.Model):

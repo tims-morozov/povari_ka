@@ -1,0 +1,23 @@
+.hero-block {
+    margin-top: 80px;
+    margin-left: 350px;
+}
+
+.hero-text {
+    margin-left: 0px;
+}
+
+.ingredients-title {
+    margin-top: 40px;
+    font-size: 20px;
+    color: #333333;
+}
+
+.ingredient {
+    font-size: 17px;
+    color: #333333;
+}
+
+.steps {
+    margin-top: 40px;
+}

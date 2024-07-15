@@ -8,7 +8,7 @@
 
 
 {% block css %}
-<link rel="stylesheet" href="{% static 'category.css' %}">
+<link rel="stylesheet" href="{% static 'css/category.css' %}">
 {% endblock %}
 
 
@@ -18,7 +18,7 @@
 
     {% for x in category_result %}
         <div class="card mb-3" style="max-width: 540px;">
-            <a href="http://">
+            <a href="/recipe/{{ x.id }}">
                 <div class="row g-0 mx-auto">
                     <div class="col-md-4">
                         <img class="category-recipe-img rounded-start"
@@ -28,7 +28,7 @@
                     </div>
                     <div class="col-md-8">
                         <div class="card-body-category">
-                            <h5 class="card-title">{{x.name}}</h5>
+                            <h5 class="card-title">{{x.name|lower|capfirst}}</h5>
                             <p class="card-text">
                                 {{x.description}}
                             </p>
