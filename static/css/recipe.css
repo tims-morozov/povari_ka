@@ -19,5 +19,38 @@
 }
 
 .steps {
-    margin-top: 40px;
+    margin-top: 25px;
+}
+
+.step-image {
+    height: 180px;
+    width: 250px;
+    object-fit: cover;
+}
+
+.card-body {
+    margin-top: 8px;
+    margin-left: 40px;
+}
+
+.card-text {
+    margin-top: 8px;
+}
+
+.serving-card-body {
+    margin-top: 8px;
+    margin-left: 40px;
+    width: 280px;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+.serving-image {
+    height: 350px;
+    width: 250px;
+    object-fit: cover;
+}
+
+.hr-recipe {
+    width: 50px;
 }

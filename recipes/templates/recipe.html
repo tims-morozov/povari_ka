@@ -14,6 +14,7 @@
 
 {% block content %}
     <div class="hero-block">
+
         <div class="row">
             <div class="col-md-10">
                 <div class="row bg-white rounded">
@@ -33,11 +34,68 @@
             </div>
         </div>
 
+        <hr class="hr-recipe">
+
         <h1 class="ingredients-title">Состав / Ингредиенты (на одну порцию):</h1>
         
         <ul class="ingredients-list">
             <li class="ingredient">Вода</li>
+            <li class="ingredient">Вода</li>
+            <li class="ingredient">Вода</li>
+            <li class="ingredient">Вода</li>
+            <li class="ingredient">Вода</li>
+            <li class="ingredient">Вода</li>
         </ul>
+
+        <hr class="hr-recipe">
+
+        <h1 class="ingredients-title">Шаги приготовления:</h1>
+
+        <div class="steps mb-3" style="max-width: 700px;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img class="step-image" src="{% static 'img/soups.png' %}" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Шаг 1</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="steps mb-3" style="max-width: 700px;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img class="step-image" src="{% static 'img/soups.png' %}" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Шаг 2</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="hr-recipe">
+
+        <h1 class="ingredients-title">Подача:</h1>
+
+        <div class="steps mb-3" style="max-width: 700px;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img class="serving-image" src="{% static 'img/soups.png' %}" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="serving-card-body">
+                        <p class="card-title">При подаче в рассольник в каждую тарелку при желании положите свежую сметану и зелень. Приятного аппетита!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>   
 {% endblock %}
 
