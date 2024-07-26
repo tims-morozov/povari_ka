@@ -19,16 +19,13 @@
             <div class="col-md-10">
                 <div class="row bg-white rounded">
                     <div class="col-md-3 mt-1">
-                        <img class="hero-image img-fluid img-responsive rounded product-image" src="{% static 'img/soups.png' %}">
+                        <img class="hero-image img-fluid img-responsive rounded product-image" src="{{ recipe_choices.image.url }}">
                     </div>
                     <div class="hero-text col-md-6 mt-3">
-                        <h5>Рассольник с перловкой и солеными огурцами</h5>
+                        <h5>{{ recipe_choices.name|lower|capfirst }}</h5>
                         <hr>
-                        <p class="text-justify para mb-0">Ароматный, сытный, вкусный - удовольствие в каждой ложке!
-                            Рассольник классический с перловкой и солеными огурцами - суп знакомый всем с детства. 
-                            Это отличный вариант первого блюда для всей семьи на обед. Приготовьте такой рассольник, и 
-                            вся семья будет довольна!<br><br>
-                        </p>
+                        <p class="text-justify para mb-0">{{ recipe_choices.description }}<br><br></p>
+                        <h6 class="cooking-time">Время приготовления: {{ recipe_choices.cooking_time }} (мин.)</h6>
                     </div>
                 </div>
             </div>
@@ -39,45 +36,30 @@
         <h1 class="ingredients-title">Состав / Ингредиенты (на одну порцию):</h1>
         
         <ul class="ingredients-list">
-            <li class="ingredient">Вода</li>
-            <li class="ingredient">Вода</li>
-            <li class="ingredient">Вода</li>
-            <li class="ingredient">Вода</li>
-            <li class="ingredient">Вода</li>
-            <li class="ingredient">Вода</li>
+            {% for x in ingredients %}
+                <li class="ingredient">{{ x.ingredient }} ({{ x.amount_ingredient }})</li>
+            {% endfor %}
         </ul>
 
         <hr class="hr-recipe">
 
         <h1 class="ingredients-title">Шаги приготовления:</h1>
 
-        <div class="steps mb-3" style="max-width: 700px;">
-            <div class="row no-gutters">
-                <div class="col-md-4">
-                    <img class="step-image" src="{% static 'img/soups.png' %}" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Шаг 1</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        {% for x in steps %}
+            <div class="steps mb-3" style="max-width: 700px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img class="step-image" src="{{ x.image.url }}" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Шаг {{ x.step_number }}</h5>
+                            <p class="card-text">{{ x.description }}</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="steps mb-3" style="max-width: 700px;">
-            <div class="row no-gutters">
-                <div class="col-md-4">
-                    <img class="step-image" src="{% static 'img/soups.png' %}" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Шаг 2</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
 
         <hr class="hr-recipe">
 
@@ -86,11 +68,11 @@
         <div class="steps mb-3" style="max-width: 700px;">
             <div class="row no-gutters">
                 <div class="col-md-4">
-                    <img class="serving-image" src="{% static 'img/soups.png' %}" alt="...">
+                    <img class="serving-image" src="{{ serving.image.url }}" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="serving-card-body">
-                        <p class="card-title">При подаче в рассольник в каждую тарелку при желании положите свежую сметану и зелень. Приятного аппетита!</p>
+                        <p class="card-title">{{ serving.description }}</p>
                     </div>
                 </div>
             </div>

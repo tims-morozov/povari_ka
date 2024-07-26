@@ -11,9 +11,10 @@ CATEGORY_CHOICES = {
 
 class Recipe(models.Model):
     category = models.CharField(max_length=15, choices=CATEGORY_CHOICES, default='')
-    name = models.CharField(max_length=250, default='')
+    name = models.CharField(max_length=250, default='', unique=True)
     description = models.CharField(max_length=150, default='')
     image = models.ImageField(upload_to='images', blank=True, null=True, default='Recipe Image')
+    cooking_time = models.IntegerField(null=True)
 
     def __str__(self):
         self.name = self.name.capitalize()
@@ -23,7 +24,8 @@ class Recipe(models.Model):
 class Ingredient(models.Model):
     recipe = models.ForeignKey(Recipe, on_delete = models.CASCADE)
     ingredient = models.CharField(max_length=500)
-    
+    amount_ingredient = models.CharField(max_length=15, default='')
+
     def __str__(self):
         return f"ingredients for {self.recipe}"
     
@@ -31,16 +33,16 @@ class Ingredient(models.Model):
 class Step(models.Model):
     recipe = models.ForeignKey(Recipe, on_delete = models.CASCADE)
     step_number = models.IntegerField() 
-    description = models.CharField(max_length=1200)
+    description = models.CharField(max_length=230)
     image = models.ImageField(upload_to='images', default='')
     
     def __str__(self):
-        return f"steps for {self.recipe}"
+        return f"step {self.step_number} for {self.recipe}"
     
 
 class Serving(models.Model):
     recipe = models.ForeignKey(Recipe, on_delete = models.CASCADE, default='')
-    description = models.CharField(max_length=800)
+    description = models.CharField(max_length=106)
     image = models.ImageField(upload_to='images', default='')
 
     def __str__(self):

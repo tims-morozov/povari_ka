@@ -3,12 +3,22 @@
     margin-left: 350px;
 }
 
+.hero-image {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+}
+
 .hero-text {
     margin-left: 0px;
 }
 
+.cooking-time {
+    color: #000000;
+}
+
 .ingredients-title {
-    margin-top: 40px;
+    margin-top: 30px;
     font-size: 20px;
     color: #333333;
 }
